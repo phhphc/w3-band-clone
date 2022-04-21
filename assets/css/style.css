@@ -1,0 +1,423 @@
+:root {
+    --orange: #f44336
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* common */
+
+.container {
+    margin: auto;
+    max-width: 800px;
+    padding: 80px 16px;
+}
+
+.container > h1 {
+    letter-spacing: 4px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    width: fit-content;
+    cursor: pointer;
+    border: none;
+}
+
+.hover-cursor {
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.form-control {
+    font-size: 1rem;
+    height: 30px;
+    padding: 16px;
+    margin: 0 0 4px;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+.mt-48 {
+    margin-top: 48px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.i {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.w-49 {
+    width: 49%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.fs-120 {
+    font-size: 1.2rem;
+}
+
+.align-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* header */
+#header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar-toggle {
+    display: inherit;
+}
+
+.navbar-toggle-btn {
+    height:49.2px;
+    display: none;
+}
+
+.nav-branch {
+    width: fit-content;
+}
+
+.nav-item {
+    padding: 18px 24px 12px;
+}
+
+#header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.nav-dropdown .nav-dropdown-content {
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    display: none;
+    min-width: 160px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#search-icon {
+    height: 100%;
+}
+
+#search-icon:hover {
+    background-color: var(--orange);
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px 16px;
+}
+
+.dropdown-item:hover {
+    background-color: #ccc;
+}
+
+/* Banner */
+
+#banner {
+    position: relative;
+}
+
+#banner::before {
+    content: "";
+    display: block;
+    height: 49px;
+}
+
+#banner div {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 75%;
+}
+
+/* Content */
+#content {
+    text-align: center;
+}
+
+#content p, #content h1 {
+    margin: 15px 0;
+}
+
+#content .row img {
+    border-radius: 4px;
+}
+
+/* Ticket sold */
+#ticket-sold {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+#sold-status {
+    background-color: #fff;
+    color: #757575;
+    text-align: left;
+}
+
+#sold-status div.row {
+    border-bottom: 1px solid #ddd;
+    justify-content: unset;
+    padding: 8px 20px;
+}
+
+#sold-status .sold-out {
+    background-color: var(--orange);
+    color: #fff;
+    margin: -3px 16px 0;
+    padding: 3px 8px 0;
+}
+
+#sold-status .available {
+    background-color: #000;
+    color: #fff;
+    margin-left: auto;
+    margin-right: 16px;
+
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 27px;
+    text-align: center;
+}
+
+#ticket-sold .row {
+    justify-content: space-between;
+}
+
+.row .card {
+    width: 31%;
+    color: #000;
+    text-align: left;
+}
+
+#ticket-sold .card>div {
+    background-color: #fff;
+}
+
+#ticket-sold .row .card img {
+    width: 100%;
+    display: block;
+}
+
+#ticket-sold .card img:hover {
+    opacity: 0.6;
+}
+
+/* Contact */
+#contact form input[type=submit] {
+    float: right;
+    padding: 11px;
+}
+
+#contact .row {
+    justify-content: space-between;
+}
+
+#contact .row div {
+    line-height: 1.4;
+}
+
+/* Map */
+#map img {
+    filter: grayscale(50%);
+}
+
+/* Footer */
+#footer {
+    opacity: 0.6;
+}
+
+#footer a {
+    color: inherit;
+}
+
+#footer svg:hover {
+    opacity: 0.6;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+}
+
+@keyframes modal-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal>.container {
+    background-color: #fff;
+    padding: 0;
+    max-width: none;
+    width: 900px;
+    animation: modal-animation ease 0.3s;
+}
+
+.modal .modal-header {
+    background-color: #009688;
+    color: #fff;
+    padding-bottom: 32px;
+}
+
+.modal .modal-header .modal-close {
+    margin-left: auto;
+    width: fit-content;
+    padding: 12px 16px 6px;
+}
+
+.modal .modal-header .modal-close:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+.modal .modal-header h2 {
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 550;
+    font-size: 30px;
+    padding: 12px;
+}
+
+.modal .modal-body {
+    padding: 12px;
+}
+
+.modal form input, .modal form button {
+    display: block;
+    width: 100%;
+    font-size: inherit;
+}
+
+.modal form label {
+    font-weight: 500;
+}
+
+.modal form input {
+    padding: 8px;
+    margin: 12px 0px 20px;
+    border: 1px solid #ccc;
+}
+
+.modal form button {
+    padding: 16px;
+    margin-bottom: 8px;
+    background-color: #009688;
+    color: #fff;
+}
+
+.modal .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.modal .modal-footer button {
+    background-color: #f44336;
+    font-size: inherit;
+    padding: 5px 16px 8px;
+}
+
+.modal .modal-footer button:hover {
+    background-color: #ccc;
+}
+
+.modal .modal-footer a {
+    color: #2196F3;
+}
